@@ -1,2 +1,5 @@
 #!/usr/bin/env node
-console.log('Welcome to the Brain Games!')
+/* jshint esversion: 6 */
+import meeting from '../src/cli.js';
+
+meeting();

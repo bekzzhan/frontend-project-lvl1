@@ -1,0 +1,32 @@
+---
+
+plugins:
+  # https://github.com/jest-community/eslint-plugin-jest
+  - jest
+
+# https://eslint.org/docs/user-guide/configuring#specifying-environments
+env:
+  node: true
+  es2021: true
+  jest/globals: true
+extends:
+  - 'airbnb-base'
+  - 'plugin:jest/recommended'
+
+parserOptions:
+  ecmaVersion: 11
+  sourceType: module
+
+rules:
+  no-console: 0
+  import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version
+  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
+  jest/no-disabled-tests: 1
+  jest/no-focused-tests: 2
+  jest/no-identical-title: 2
+  jest/prefer-to-have-length: 1
+  jest/valid-expect: 2
+
+settings:
+  jest:
+    version: 24
